@@ -1,0 +1,540 @@
+/* El código aquí presente puede encontrarse en el repositorio del usuario josedbonilla en github.com*/
+
+/****************************************
+Cascade Style Sheet for Prototipo QP
+
+Autor: José Bonilla.
+Ver. 1.0.
+Agosto, 2014.
+
+****************************************/
+
+/****************************************
+GENERAL
+****************************************/
+*{
+	margin: 0 auto;
+	padding: 0;
+    font-family: verdana, helvetica;
+    outline: 0px none;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+article {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+section {
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+input {
+    border: none;
+}
+
+h3 {
+    color: #cb0009;
+    font-family: calibri;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-family: calibri;
+    font-size: 17px;
+    color: #4D4D4D;
+}
+
+.proto {
+    top: 25%;
+    left: 0px;
+    width: 42px;
+    height: 102px;
+    color: #FFF;
+    cursor: pointer;
+    text-indent: -100000px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100000;
+    margin-left: -7px;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+/****************************************
+HEADER
+****************************************/
+
+.header-container {
+	width: 100%;
+	height: 57px;
+	background-color: #cb0009;
+    border-top: 5px solid #f4b314;
+	/*Opacity start
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+
+    Opacity end*/
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+header {
+	max-width: 960px;
+    height: 96px;
+    padding: 0;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#header #header-content {
+    margin: 10px;
+}
+
+#logo{
+	max-width: 354px;
+	display: block;
+	float: left;
+    opacity: 100;
+}
+
+/****************************************
+NAVIGATION
+****************************************/
+
+.nav_principal{
+	float: right;
+	width: 32,5%;
+	list-style: none;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 10px;
+}
+
+.nav_principal li{
+	display: inline-block;
+    float: left;
+    font-size: 16px;
+    padding: 2px;
+
+}
+
+.nav_principal li:hover{
+    display: inline-block;
+    background-color: #f4b314;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav_principal li a {
+	color: #FFF;
+    left: 50%;
+    margin: 30px 5px 30px 5px;
+}
+
+.nav_principal li a:hover {
+    color: #000;
+    left: 50%;
+    margin: 30px 5px 30px 5px;
+}
+
+
+#selected {
+    background-color: #f4b314;
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #cb0009;
+}
+
+/****************************************
+FOOTER
+****************************************/
+.footer-container {
+    top: 0;
+}
+
+footer{
+	background-color: #333333;
+	color: white;
+    top: 0;
+
+}
+
+.footer_social {
+    width: 100;
+    float: right;
+    height: 60px;
+    padding: 10px 10px 10px 10px;
+}
+
+.footer_social li{
+    display: inline-block;
+}
+
+.social {
+    width: 32px;
+    height: 32px;
+}
+
+.creditos {
+    width: 100%;
+    clear: both;
+    text-align: center;
+    font-size: 10px;
+    color: #707070;
+}
+
+/****************************************
+WRAPPER
+****************************************/
+
+.wrapper {
+	max-width: 960px;
+}
+
+.main-container{
+	margin: 0 auto;
+	margin-top: 96px;
+    z-index: 3;
+    margin-bottom: 50px;
+}
+
+.homeCont {
+    top: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/****************************************
+INICIO
+****************************************/
+.slider{
+    background: none;
+    height: 500px;
+    width: 960px;
+    top: 200px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.flip-container {
+    perspective: 1000;
+    float: left;
+}
+    /* flip the pane when hovered */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+.flip-container, .front, .back {
+    width: 250px;
+    height: 250px;
+    background: red
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+}
+
+#slider{
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    width: 100%;
+    height: 92%;
+    margin: 0 auto;
+    box-shadow : inset 0 0 1em #111;
+}
+
+#slider > div{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#slider > div > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.artHome {
+    max-width: 90%;
+    clear: both;
+}
+
+/*bancos*/
+
+.list-bancos, .estatales, .privados{
+    list-style: none;
+    clear: both;
+    margin: 10px 0 10px 0;
+}
+
+.banco {
+    background: none;
+    border: none;
+    float: left;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.banco:hover {
+    border: none;
+    background-image: url("..img/bancos/bac.png") no-repeat;
+}
+
+/****************************************
+prepago
+****************************************/
+
+.prep {
+    top: 60px;
+    margin-bottom: 20px;
+    height: 400px;
+}
+
+.artpre {
+    max-width: 85%;
+    clear: both;
+}
+
+.responList {
+    width: 90%;
+}
+
+.responList li {
+    margin-top: 5px;
+}
+
+/****************************************
+quickpass
+****************************************/
+
+.artqp {
+    max-width: 90%;
+    clear: both;
+}
+
+
+/****************************************
+RUTAS
+****************************************/
+
+.tituloRuta {
+	border-bottom: 2px solid #cb0009;
+}
+
+iframe{
+	width: 100%;
+	margin: 0 auto;
+	clear: both;
+    margin: 30px 0 30px 0; 
+}
+
+
+
+/****************************************
+SOPORTE
+****************************************/
+.divFormulario1 {
+    background-color: #939292;
+    max-width: 100%;
+    clear: both;
+    height: 425px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top:1px solid;
+    border-bottom:1px solid;
+    border-color:#F19718; 
+}
+
+.divFormulario1 h3{
+    font-size:16px;
+    font-family:verdana;
+    margin-top :10px;
+    width:80%;   
+}
+.divFormulario1 p{
+    font-size:12px;
+    font-family:verdana;
+    margin-top:10px;
+    width:80%;    
+}
+.divFormulario{
+    background-color: #FFFFFF;
+    max-width: 100%;
+    clear: both;
+    height: 295px;
+    margin-bottom:10px;
+    border-bottom:1px solid;
+    border-color:#F19718; 
+}
+
+.forma {
+    width: 90%;
+}
+
+.izq {
+    display: block;
+    float: left;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.der {
+    display: block;
+    float: right;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.izq input{
+    border-radius:10px;
+    width:77%;
+    background-color:#EFEFEF;
+    border:1px solid;
+   border-color: #F19718;
+   margin-bottom:5px;
+   color:#F19718;
+   font-size:12px;
+   padding:2px 2px 2px 2px;
+}
+
+.izq textarea{
+    border-radius:10px;
+    width:77%;
+    background-color:#EFEFEF;
+    border:1px solid;
+    border-color: #F19718;
+    color:#F19718;
+}
+
+label {
+    float: left;
+    width: 100%;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input {
+    float: left;
+    margin-bottom: 10px;  
+}
+
+.divArt{
+    max-width: 100%;
+    background-color: red;
+}
+
+.artCol {
+    background-color: blue;
+    width: 100%;
+    clear: both;
+}
+
+.btnSop {
+    background-color: #cb0009; 
+    color: #ffffff;
+    margin: 20px;
+    width: 150px;
+    height: 50px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius:  15px;
+    border: none;
+    font-weight: bold;
+}
+
+.btnSop:hover {
+    background-color: yellow; 
+    color: #cb0009;
+    margin: 20px ;
+    width: 150px;
+    height: 50px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius:  15px;
+    border-bottom: 3px solid #f4b314;
+    border-left: 3px solid #f4b314;
+        font-weight: bold;
+}
+
+.der h1{
+    font-family:verdana;
+    color:#F19718;
+    font-size:16px;
+    margin-top:15px; 
+}
+
+.der p{
+    font-family:verdana;
+    color:black;
+    font-size:12px;
+    margin-top:15px;       
+}
+
+.imgsop{
+    margin-left: 20%;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius:  15px;
+}
